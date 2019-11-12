@@ -5,20 +5,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.stereotype.Service;
 
-import co.edu.uniajc.services.wse_estado.model.Estado;
-import co.edu.uniajc.services.wse_estado.repository.EstadoRepository;
+import co.edu.uniajc.services.wse_estado.model.Ciudad;
+import co.edu.uniajc.services.wse_estado.repository.CiudadRepository;
 
 @Service
-public class EstadoService {
+public class CiudadService {
 
 	@Autowired
-	EstadoRepository productosRepository;
+	CiudadRepository productosRepository;
 	
-	public Estado saveProducto(Estado producto) {
+	public Ciudad saveProducto(Ciudad producto) {
 		return productosRepository.save(producto);
 	}
 	
-	public Estado updateProducto(Estado producto) {
+	public Ciudad updateProducto(Ciudad producto) {
 		return productosRepository.save(producto);
 	}
 	
@@ -26,7 +26,7 @@ public class EstadoService {
 		productosRepository.deleteById(id);
 	}
 	
-	public List<Estado> getAllProductos(){
+	public List<Ciudad> getAllProductos(){
 		return productosRepository.findAll();
 	}
 }
