@@ -24,15 +24,23 @@ public class Publicada {
 	@Column(name="url")
 	private String url;
 	
-	@Column(name="publicada_valor")
-	private int publicada_valor;
+	@Column(name="publicada")
+	private int publicada;
+	
+	@Column(name="plantilla")
+	private int plantilla;
 
-	public Publicada(int id, int persona_id, String url, int publicada_valor) {
+	public Publicada(int id, int persona_id, String url, int publicada, int plantilla) {
 		super();
 		this.id = id;
 		this.persona_id = persona_id;
 		this.url = url;
-		this.publicada_valor = publicada_valor;
+		this.publicada = publicada;
+		this.plantilla = plantilla;
+	}
+	
+	public Publicada() {
+		super();
 	}
 
 	public int getId() {
@@ -59,12 +67,22 @@ public class Publicada {
 		this.url = url;
 	}
 
-	public int getPublicada_valor() {
-		return publicada_valor;
+	public int getPublicada() {
+		return publicada;
 	}
 
-	public void setPublicada_valor(int publicada_valor) {
-		this.publicada_valor = publicada_valor;
+	public void setPublicada(int publicada) {
+		this.publicada = publicada;
 	}
+
+	public int getPlantilla() {
+		return plantilla;
+	}
+
+	public void setPlantilla(int plantilla) {
+		this.plantilla = plantilla;
+	}
+
+	
 	
 }

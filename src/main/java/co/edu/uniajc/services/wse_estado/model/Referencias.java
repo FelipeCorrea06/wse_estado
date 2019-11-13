@@ -46,6 +46,9 @@ public class Referencias {
 		this.correo = correo;
 		this.telefono = telefono;
 	}
+	public Referencias() {
+		super();
+	}
 
 	public int getId() {
 		return id;
